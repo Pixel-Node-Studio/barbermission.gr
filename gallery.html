@@ -26,36 +26,45 @@
   </style>
 </head>
 <body class="bg-black text-white">
+
+  
   <!-- Header -->
-  <header class="fixed w-full bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="images/logo.png" alt="BarberMission Logo" class="h-10 w-10 object-contain">
-        <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
-      </a>
-      <nav class="hidden md:block">
-        <ul class="flex gap-8 text-sm uppercase font-medium tracking-wider">
-          <li><a href="index.html" class="hover:text-[#D4AF37]">Home</a></li>
-          <li><a href="about.html" class="hover:text-[#D4AF37]">About</a></li>
-          <li><a href="services.html" class="hover:text-[#D4AF37]">Services</a></li>
-          <li><a href="gallery.html" class="text-[#D4AF37]">Gallery</a></li>
-          <li><a href="contact.html" class="hover:text-[#D4AF37]">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-black text-center">
-      <a href="index.html" class="block py-3 hover:text-[#D4AF37]">Home</a>
-      <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
-      <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
-      <a href="gallery.html" class="block py-3 text-[#D4AF37]">Gallery</a>
-      <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
-    </div>
-  </header>
+<header id="main-header" class="fixed w-full top-0 left-0 right-0 bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20 transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-5 md:py-6">
+    
+    <!-- Text Logo -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide">
+      Barber<span class="text-[#D4AF37]">Mission</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-10 text-sm uppercase font-medium tracking-wider">
+        <li><a href="index.html" class="nav-link text-[#D4AF37]">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Button -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black text-center border-t border-[#D4AF37]/10">
+    <a href="index.html" class="block py-3 text-[#D4AF37]">Home</a>
+    <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
+    <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
+    <a href="gallery.html" class="block py-3 hover:text-[#D4AF37]">Gallery</a>
+    <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
+  </div>
+</header>
+
+
   <div class="h-20"></div>
 
   <!-- Gallery -->
@@ -89,21 +98,110 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-white py-8 border-t border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
-      <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
-      <p>Website by <a href="https://mariosgian.github.io" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
+<footer class="bg-black text-white pt-12 pb-8 border-t border-[#D4AF37]/20">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+      
+      <!-- Logo & About -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+        </div>
+        <p class="text-sm text-white/70 leading-relaxed">
+          Premium barbershop in Kaisariani, Athens — offering precision cuts, beard grooming, and modern men's style since 2021.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="index.html" class="hover:text-[#D4AF37] transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#D4AF37] transition">About</a></li>
+          <li><a href="services.html" class="hover:text-[#D4AF37] transition">Services</a></li>
+          <li><a href="gallery.html" class="hover:text-[#D4AF37] transition">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Our Services</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>Haircut & Styling</li>
+          <li>Beard Trim</li>
+          <li>Full Grooming</li>
+          <li>Kids Cut</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Contact Info</h4>
+        <address class="not-italic text-sm text-white/70 space-y-1">
+          <p>65 Efthroniou Street, Kaisariani</p>
+          <p>Athens, Greece</p>
+          <p class="mt-2">
+            <a href="tel:+302107220307" class="hover:text-[#D4AF37] transition">+30 210 722 0307</a>
+          </p>
+          <p>
+            <a href="https://instagram.com/barber.mission" target="_blank" class="hover:text-[#D4AF37] transition">@barber.mission</a>
+          </p>
+        </address>
+      </div>
     </div>
-  </footer>
+
+    <!-- Divider -->
+    <div class="border-t border-[#D4AF37]/10 my-6"></div>
+
+    <!-- Bottom Bar -->
+    <div class="flex flex-col md:flex-row justify-between items-center text-sm text-white/60 text-center md:text-left">
+      <p class="mb-2 md:mb-0">
+        Designed & Developed by 
+        <a href="https://www.pixelnodestudio.com" target="_blank" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a>
+      </p>
+      <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
 
   <script>
     feather.replace();
-    AOS.init({
-      duration: 800,
-      once: true
-    });
+    AOS.init({ duration: 800, once: true });
+
     document.getElementById('menu-toggle').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+  <script>
+    feather.replace();
+  
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  
+    // Highlight active link automatically
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+  <script>
+    feather.replace();
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  
+    // Highlight current page
+    const current = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === current) {
+        link.classList.add('text-[#D4AF37]');
+      }
     });
   </script>
 </body>
