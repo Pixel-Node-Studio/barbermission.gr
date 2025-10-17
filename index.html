@@ -13,20 +13,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #000;
+    }
+
     body {
       font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
     }
+
     h1, h2, h3 {
       font-family: 'Montserrat', sans-serif;
     }
+
     .hero-bg {
       background-image: url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=2000');
       background-size: cover;
       background-position: center;
     }
+
     .nav-link {
       position: relative;
     }
+
     .nav-link::after {
       content: '';
       position: absolute;
@@ -37,98 +49,223 @@
       background-color: #D4AF37;
       transition: width 0.3s ease;
     }
+
     .nav-link:hover::after {
       width: 100%;
     }
   </style>
 </head>
 
-<body class="bg-white text-black">
+<body class="text-black">
 
   <!-- Header -->
-  <header class="fixed w-full bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <!-- Logo -->
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="images/logo.png" alt="BarberMission Logo" class="h-10 w-10 object-contain">
-        <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
-      </a>
+<header id="main-header" class="fixed w-full top-0 left-0 right-0 bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20 transition-all duration-300">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-5 md:py-6">
+    
+    <!-- Text Logo -->
+    <a href="index.html" class="text-2xl font-bold tracking-wide">
+      Barber<span class="text-[#D4AF37]">Mission</span>
+    </a>
 
-      <!-- Desktop Nav -->
-      <nav class="hidden md:block">
-        <ul class="flex gap-8 text-sm uppercase font-medium tracking-wider">
-          <li><a href="index.html" class="nav-link">Home</a></li>
-          <li><a href="about.html" class="nav-link">About</a></li>
-          <li><a href="services.html" class="nav-link">Services</a></li>
-          <li><a href="booking.html" class="nav-link">Booking</a></li>
-          <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- Desktop Nav -->
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-10 text-sm uppercase font-medium tracking-wider">
+        <li><a href="index.html" class="nav-link text-[#D4AF37]">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
 
-      <!-- Mobile Menu Button -->
-      <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <i data-feather="menu"></i>
-      </button>
-    </div>
+    <!-- Mobile Button -->
+    <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <i data-feather="menu"></i>
+    </button>
+  </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black text-center">
-      <a href="index.html" class="block py-3 hover:text-[#D4AF37]">Home</a>
-      <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
-      <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
-      <a href="booking.html" class="block py-3 hover:text-[#D4AF37]">Booking</a>
-      <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
-    </div>
-  </header>
-
-  <!-- Spacer -->
-  <div class="h-20"></div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-black text-center border-t border-[#D4AF37]/10">
+    <a href="index.html" class="block py-3 text-[#D4AF37]">Home</a>
+    <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
+    <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
+    <a href="gallery.html" class="block py-3 hover:text-[#D4AF37]">Gallery</a>
+    <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
+  </div>
+</header>
 
   <!-- Hero Section -->
-  <section class="hero-bg h-screen flex items-center justify-center text-center text-white relative">
-    <div class="absolute inset-0 bg-black/60"></div>
-    <div class="relative z-10 max-w-3xl px-6" data-aos="fade-up">
-      <h1 class="text-5xl md:text-7xl font-bold mb-4">Premium Cuts & Grooming Since 2021</h1>
-      <p class="text-lg md:text-xl mb-8 text-white/90">Modern barbershop in Kaisariani, Athens — tailored style, sharp detail.</p>
-      <a href="booking.html" class="bg-[#D4AF37] hover:bg-[#B8941F] text-black font-bold py-3 px-8 rounded transition">Book Appointment</a>
-    </div>
-  </section>
+<section class="hero-bg min-h-screen flex items-center justify-center text-center text-white relative">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 max-w-3xl px-6" data-aos="fade-up">
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+      Premium Cuts & <br class="hidden md:block"> Grooming Since 2021
+    </h1>
+    <p class="text-lg md:text-xl mb-8 text-white/90">
+      Modern barbershop in Kaisariani, Athens — tailored style, sharp detail.
+    </p>
+    <a href="booking.html" class="bg-[#D4AF37] hover:bg-[#B8941F] text-black font-bold py-3 px-8 rounded transition">
+      Book Appointment
+    </a>
+  </div>
+</section>
 
-  <!-- Highlights Section -->
-  <section class="py-16 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded shadow-md text-center" data-aos="fade-up">
-        <i data-feather="award" class="text-[#D4AF37] mb-4 mx-auto w-8 h-8"></i>
-        <h3 class="text-xl font-bold mb-2">Experience</h3>
-        <p>Over a decade of expertise in men’s grooming and precision cuts.</p>
+<!-- Info Bar -->
+<section class="bg-black text-white py-6 border-t border-[#D4AF37]/20 border-b border-[#D4AF37]/20">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 text-center gap-6 text-sm md:text-base">
+    <div>
+      <i data-feather="clock" class="w-5 h-5 text-[#D4AF37] inline-block mb-1"></i>
+      <p>Open Tuesday – Saturday: 10:00 – 20:00</p>
+    </div>
+    <div>
+      <i data-feather="map-pin" class="w-5 h-5 text-[#D4AF37] inline-block mb-1"></i>
+      <p>Kaisariani, Athens</p>
+    </div>
+    <div>
+      <i data-feather="phone" class="w-5 h-5 text-[#D4AF37] inline-block mb-1"></i>
+      <p>Call us: <a href="tel:+302107220307" class="hover:text-[#D4AF37] transition">210 722 0307</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Highlights Section -->
+<section class="py-16 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white p-6 rounded shadow-md text-center" data-aos="fade-up">
+      <i data-feather="award" class="text-[#D4AF37] mb-4 mx-auto w-8 h-8"></i>
+      <h3 class="text-xl font-bold mb-2">Experience</h3>
+      <p>Over a decade of expertise in men’s grooming and precision cuts.</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+      <i data-feather="scissors" class="text-[#D4AF37] mb-4 mx-auto w-8 h-8"></i>
+      <h3 class="text-xl font-bold mb-2">Style</h3>
+      <p>Tailored to your face shape and lifestyle — modern or classic.</p>
+    </div>
+    <div class="bg-white p-6 rounded shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+      <i data-feather="target" class="text-[#D4AF37] mb-4 mx-auto w-8 h-8"></i>
+      <h3 class="text-xl font-bold mb-2">Precision</h3>
+      <p>Every cut is a masterpiece — sharp lines, clean fades, and perfect symmetry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Experience Banner -->
+<section class="bg-[#D4AF37] text-black py-12 text-center">
+  <div class="max-w-3xl mx-auto px-6" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-bold mb-3">More Than a Cut — It’s an Experience</h2>
+    <p class="text-lg md:text-xl text-black/80">
+      Step into BarberMission for sharp looks, modern style, and a touch of tradition in the heart of Kaisariani.
+    </p>
+  </div>
+</section>
+
+
+
+ <!-- Footer -->
+<footer class="bg-black text-white pt-12 pb-8 border-t border-[#D4AF37]/20">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+      
+      <!-- Logo & About -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+        </div>
+        <p class="text-sm text-white/70 leading-relaxed">
+          Premium barbershop in Kaisariani, Athens — offering precision cuts, beard grooming, and modern men's style since 2021.
+        </p>
       </div>
-      <div class="bg-white p-6 rounded shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
-        <i data-feather="scissors" class="text-[#D4AF37] mb-4 mx-auto w-8 h-8"></i>
-        <h3 class="text-xl font-bold mb-2">Style</h3>
-        <p>Tailored to your face shape and lifestyle — modern or classic.</p>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li><a href="index.html" class="hover:text-[#D4AF37] transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#D4AF37] transition">About</a></li>
+          <li><a href="services.html" class="hover:text-[#D4AF37] transition">Services</a></li>
+          <li><a href="gallery.html" class="hover:text-[#D4AF37] transition">Gallery</a></li>
+          <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Contact</a></li>
+        </ul>
       </div>
-      <div class="bg-white p-6 rounded shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
-        <i data-feather="target" class="text-[#D4AF37] mb-4 mx-auto w-8 h-8"></i>
-        <h3 class="text-xl font-bold mb-2">Precision</h3>
-        <p>Every cut is a masterpiece — sharp lines, clean fades, and perfect symmetry.</p>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Our Services</h4>
+        <ul class="space-y-2 text-sm text-white/70">
+          <li>Haircut & Styling</li>
+          <li>Beard Trim</li>
+          <li>Full Grooming</li>
+          <li>Kids Cut</li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Contact Info</h4>
+        <address class="not-italic text-sm text-white/70 space-y-1">
+          <p>65 Efthroniou Street, Kaisariani</p>
+          <p>Athens, Greece</p>
+          <p class="mt-2">
+            <a href="tel:+302107220307" class="hover:text-[#D4AF37] transition">+30 210 722 0307</a>
+          </p>
+          <p>
+            <a href="https://instagram.com/barber.mission" target="_blank" class="hover:text-[#D4AF37] transition">@barber.mission</a>
+          </p>
+        </address>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-black text-white py-8 border-t border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
+    <!-- Divider -->
+    <div class="border-t border-[#D4AF37]/10 my-6"></div>
+
+    <!-- Bottom Bar -->
+    <div class="flex flex-col md:flex-row justify-between items-center text-sm text-white/60 text-center md:text-left">
+      <p class="mb-2 md:mb-0">
+        Designed & Developed by 
+        <a href="https://www.pixelnodestudio.com" target="_blank" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a>
+      </p>
       <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
-      <p>Website by <a href="https://mariosgian.github.io" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
     </div>
-  </footer>
+  </div>
+</footer>
 
   <script>
     feather.replace();
-    AOS.init();
+    AOS.init({ duration: 800, once: true });
 
     document.getElementById('menu-toggle').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+  <script>
+    feather.replace();
+  
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  
+    // Highlight active link automatically
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+  <script>
+    feather.replace();
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  
+    // Highlight current page
+    const current = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-link').forEach(link => {
+      if (link.getAttribute('href') === current) {
+        link.classList.add('text-[#D4AF37]');
+      }
     });
   </script>
 
