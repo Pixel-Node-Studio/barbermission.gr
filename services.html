@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | BarberMission</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    .fade-in-up {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+      transition: all 1s ease;
+    }
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    .hover-lift:hover { transform: translateY(-5px); }
+  </style>
+</head>
+<body class="text-white bg-black">
+  
+  <!-- Header -->
+  <header class="fixed w-full bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="BarberMission Logo" class="h-10 w-10 object-contain">
+        <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex gap-8 text-sm uppercase font-medium tracking-wider">
+          <li><a href="index.html" class="hover:text-[#D4AF37]">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#D4AF37]">About</a></li>
+          <li><a href="services.html" class="text-[#D4AF37]">Services</a></li>
+          <li><a href="booking.html" class="hover:text-[#D4AF37]">Booking</a></li>
+          <li><a href="contact.html" class="hover:text-[#D4AF37]">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black text-center">
+      <a href="index.html" class="block py-3 hover:text-[#D4AF37]">Home</a>
+      <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
+      <a href="services.html" class="block py-3 text-[#D4AF37]">Services</a>
+      <a href="booking.html" class="block py-3 hover:text-[#D4AF37]">Booking</a>
+      <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
+    </div>
+  </header>
+  <div class="h-20"></div>
+
+  <!-- Services Section -->
+  <section id="services" data-animate class="py-24 bg-white text-black">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="mb-16">
+        <div class="flex items-center justify-center gap-4 mb-4">
+          <div class="h-px w-16 bg-[#D4AF37]"></div>
+          <span class="text-[#D4AF37] tracking-[0.3em] text-sm font-medium">SERVICES</span>
+          <div class="h-px w-16 bg-[#D4AF37]"></div>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold">Our Services</h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Precision grooming crafted for the modern man — clean fades, sharp lines, and premium care.  
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+          <i data-feather="scissors" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
+          <h3 class="text-2xl font-bold mb-3">Haircut</h3>
+          <p class="text-gray-300 mb-3">Classic or modern styles tailored to you.</p>
+          <p class="text-4xl font-bold text-[#D4AF37]">€15</p>
+        </div>
+
+        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+          <i data-feather="activity" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
+          <h3 class="text-2xl font-bold mb-3">Beard Trim</h3>
+          <p class="text-gray-300 mb-3">Detailed beard shaping & finish.</p>
+          <p class="text-4xl font-bold text-[#D4AF37]">€10</p>
+        </div>
+
+        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+          <i data-feather="star" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
+          <h3 class="text-2xl font-bold mb-3">Full Grooming</h3>
+          <p class="text-gray-300 mb-3">Haircut & beard — the full experience.</p>
+          <p class="text-4xl font-bold text-[#D4AF37]">€20</p>
+        </div>
+
+        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+          <i data-feather="user" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
+          <h3 class="text-2xl font-bold mb-3">Kids Cut</h3>
+          <p class="text-gray-300 mb-3">Friendly and patient service for kids.</p>
+          <p class="text-4xl font-bold text-[#D4AF37]">€12</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 border-t border-[#D4AF37]/20">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
+      <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
+      <p>Website by <a href="https://mariosgian.github.io" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('fade-in-up');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
