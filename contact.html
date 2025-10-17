@@ -27,31 +27,32 @@
     }
   </style>
 </head>
+
 <body class="bg-black text-white">
   
   <!-- Header -->
-  <header class="fixed w-full bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="images/logo.png" alt="BarberMission Logo" class="h-10 w-10 object-contain">
-        <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+  <header id="main-header" class="fixed w-full top-0 left-0 right-0 bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-5 md:py-6">
+      <a href="index.html" class="text-2xl font-bold tracking-wide">
+        Barber<span class="text-[#D4AF37]">Mission</span>
       </a>
+
       <nav class="hidden md:block">
-        <ul class="flex gap-8 text-sm uppercase font-medium tracking-wider">
-          <li><a href="index.html" class="hover:text-[#D4AF37]">Home</a></li>
-          <li><a href="about.html" class="hover:text-[#D4AF37]">About</a></li>
-          <li><a href="services.html" class="hover:text-[#D4AF37]">Services</a></li>
-          <li><a href="gallery.html" class="hover:text-[#D4AF37]">Gallery</a></li>
-          <li><a href="contact.html" class="text-[#D4AF37]">Contact</a></li>
+        <ul class="flex items-center gap-10 text-sm uppercase font-medium tracking-wider">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link text-[#D4AF37]">Contact</a></li>
         </ul>
       </nav>
+
       <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+        <i data-feather="menu"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-black text-center">
+
+    <div id="mobile-menu" class="hidden md:hidden bg-black text-center border-t border-[#D4AF37]/10">
       <a href="index.html" class="block py-3 hover:text-[#D4AF37]">Home</a>
       <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
       <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
@@ -59,72 +60,118 @@
       <a href="contact.html" class="block py-3 text-[#D4AF37]">Contact</a>
     </div>
   </header>
+
   <div class="h-20"></div>
 
+  <!-- Hero -->
+  <section class="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1600" 
+         alt="Barbershop Interior" 
+         class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 px-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Contact <span class="text-[#D4AF37]">Us</span></h1>
+      <p class="text-white/80 text-lg max-w-2xl mx-auto">
+        Get in touch or visit us — we’re here to keep you looking sharp and confident.
+      </p>
+    </div>
+  </section>
+
   <!-- Contact Section -->
-  <section class="py-24 bg-black text-white">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="text-center mb-16" data-aos="fade-up">
-        <div class="flex items-center justify-center gap-4 mb-4">
-          <div class="h-px w-16 bg-[#D4AF37]"></div>
-          <span class="text-[#D4AF37] tracking-[0.3em] text-sm font-medium">CONTACT</span>
-          <div class="h-px w-16 bg-[#D4AF37]"></div>
+  <section class="py-24 bg-gradient-to-b from-black via-[#0e0e0e] to-black">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-start">
+      
+      <!-- Contact Info -->
+      <div data-aos="fade-right" class="space-y-8">
+        <div>
+          <h3 class="text-3xl font-bold mb-4 text-[#D4AF37]">Barber Mission</h3>
+          <p class="flex items-center gap-3"><i data-feather="map-pin" class="text-[#D4AF37]"></i> Ευφρονίου 65, Καισαριανή, Αθήνα</p>
+          <p class="flex items-center gap-3"><i data-feather="phone" class="text-[#D4AF37]"></i> +30 210 722 0307</p>
+          <p class="flex items-center gap-3"><i data-feather="instagram" class="text-[#D4AF37]"></i> @barber.mission</p>
         </div>
-        <h2 class="text-4xl md:text-5xl font-bold">Get in Touch</h2>
-        <p class="text-white/70 mt-4 max-w-2xl mx-auto">
-          Visit us in Kaisariani or drop us a message — we’re here to keep you looking sharp.
-        </p>
+
+        <div>
+          <h4 class="font-bold text-[#D4AF37] mb-3">Opening Hours</h4>
+          <p>Tuesday – Saturday: 10:00 – 20:00</p>
+          <p>Sunday & Monday: Closed</p>
+        </div>
+
+        <div class="rounded-xl overflow-hidden shadow-lg border border-[#D4AF37]/20">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.6389761103223!2d23.75206047605555!3d37.97228937193638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bd6cbc252089%3A0xd4ed5161846fc208!2sBarber%20Mission!5e1!3m2!1sel!2sgr!4v1760697757142!5m2!1sel!2sgr"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-12">
-        <!-- Contact Info -->
-        <div data-aos="fade-right" class="space-y-6">
+      <!-- Contact Form -->
+      <div data-aos="fade-left" class="bg-[#111] p-10 rounded-2xl border border-[#D4AF37]/20 shadow-lg">
+        <h3 class="text-3xl font-bold mb-6 text-[#D4AF37]">Send a Message</h3>
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-6">
           <div>
-            <h3 class="text-2xl font-bold mb-4 text-[#D4AF37]">Barber Mission</h3>
-            <p class="mb-2 flex items-center gap-2"><i data-feather="map-pin" class="text-[#D4AF37]"></i> Ευφρονίου 65, Καισαριανή, Αθήνα</p>
-            <p class="mb-2 flex items-center gap-2"><i data-feather="phone" class="text-[#D4AF37]"></i> 2107220307</p>
-            <p class="mb-2 flex items-center gap-2"><i data-feather="instagram" class="text-[#D4AF37]"></i> @barber.mission</p>
+            <label class="block text-white/80 mb-2" for="name">Name</label>
+            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded bg-black border border-[#333] text-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]" required>
           </div>
           <div>
-            <h4 class="font-bold text-[#D4AF37] mb-2">Opening Hours</h4>
-            <p>Tuesday – Saturday: 10:00 – 20:00</p>
-            <p>Sunday & Monday: Closed</p>
+            <label class="block text-white/80 mb-2" for="email">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded bg-black border border-[#333] text-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]" required>
           </div>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.3929909999997!2d23.7857!3d37.9795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNzfCsDU4JzQ2LjIiTiAyM8KwNDcnMDguNSJF!5e0!3m2!1sen!2sgr!4v1616161616161!5m2!1sen!2sgr"
-            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg mt-4"></iframe>
-        </div>
-
-        <!-- Contact Form -->
-        <div data-aos="fade-left">
-          <h3 class="text-2xl font-bold mb-6 text-[#D4AF37]">Send a Message</h3>
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
-            <div>
-              <label class="block text-white/80 mb-2" for="name">Name</label>
-              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded" required>
-            </div>
-            <div>
-              <label class="block text-white/80 mb-2" for="email">Email</label>
-              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded" required>
-            </div>
-            <div>
-              <label class="block text-white/80 mb-2" for="message">Message</label>
-              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded" required></textarea>
-            </div>
-            <button type="submit" class="bg-[#D4AF37] hover:bg-[#B8941F] text-black font-bold py-3 px-6 rounded transition">
-              Send Message
-            </button>
-          </form>
-        </div>
+          <div>
+            <label class="block text-white/80 mb-2" for="message">Message</label>
+            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded bg-black border border-[#333] text-white focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37]" required></textarea>
+          </div>
+          <button type="submit" class="bg-[#D4AF37] hover:bg-[#B8941F] text-black font-bold py-3 px-6 rounded-lg transition">
+            Send Message
+          </button>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-white py-8 border-t border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
-      <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
-      <p>Website by <a href="https://mariosgian.github.io" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
+  <footer class="bg-black text-white pt-12 pb-8 border-t border-[#D4AF37]/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <div>
+          <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+          <p class="text-sm text-white/70 leading-relaxed mt-3">
+            Premium barbershop in Kaisariani, Athens — offering precision cuts and modern men's grooming since 2021.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="index.html" class="hover:text-[#D4AF37] transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#D4AF37] transition">About</a></li>
+            <li><a href="services.html" class="hover:text-[#D4AF37] transition">Services</a></li>
+            <li><a href="gallery.html" class="hover:text-[#D4AF37] transition">Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Our Services</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>Haircut & Styling</li>
+            <li>Beard Trim</li>
+            <li>Full Grooming</li>
+            <li>Kids Cut</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Contact Info</h4>
+          <address class="not-italic text-sm text-white/70 space-y-1">
+            <p>65 Efthroniou Street, Kaisariani</p>
+            <p>Athens, Greece</p>
+            <p><a href="tel:+302107220307" class="hover:text-[#D4AF37]">+30 210 722 0307</a></p>
+            <p><a href="https://instagram.com/barber.mission" target="_blank" class="hover:text-[#D4AF37]">@barber.mission</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-[#D4AF37]/10 my-6"></div>
+      <div class="flex flex-col md:flex-row justify-between items-center text-sm text-white/60 text-center md:text-left">
+        <p class="mb-2 md:mb-0">Designed & Developed by <a href="https://www.pixelnodestudio.com" target="_blank" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
+        <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
