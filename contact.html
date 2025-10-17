@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | BarberMission</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    input, textarea {
+      background-color: #111;
+      border: 1px solid #333;
+      color: #fff;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 1px #D4AF37;
+    }
+  </style>
+</head>
+<body class="bg-black text-white">
+  
+  <!-- Header -->
+  <header class="fixed w-full bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/logo.png" alt="BarberMission Logo" class="h-10 w-10 object-contain">
+        <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+      </a>
+      <nav class="hidden md:block">
+        <ul class="flex gap-8 text-sm uppercase font-medium tracking-wider">
+          <li><a href="index.html" class="hover:text-[#D4AF37]">Home</a></li>
+          <li><a href="about.html" class="hover:text-[#D4AF37]">About</a></li>
+          <li><a href="services.html" class="hover:text-[#D4AF37]">Services</a></li>
+          <li><a href="gallery.html" class="hover:text-[#D4AF37]">Gallery</a></li>
+          <li><a href="contact.html" class="text-[#D4AF37]">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black text-center">
+      <a href="index.html" class="block py-3 hover:text-[#D4AF37]">Home</a>
+      <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
+      <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
+      <a href="gallery.html" class="block py-3 hover:text-[#D4AF37]">Gallery</a>
+      <a href="contact.html" class="block py-3 text-[#D4AF37]">Contact</a>
+    </div>
+  </header>
+  <div class="h-20"></div>
+
+  <!-- Contact Section -->
+  <section class="py-24 bg-black text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16" data-aos="fade-up">
+        <div class="flex items-center justify-center gap-4 mb-4">
+          <div class="h-px w-16 bg-[#D4AF37]"></div>
+          <span class="text-[#D4AF37] tracking-[0.3em] text-sm font-medium">CONTACT</span>
+          <div class="h-px w-16 bg-[#D4AF37]"></div>
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold">Get in Touch</h2>
+        <p class="text-white/70 mt-4 max-w-2xl mx-auto">
+          Visit us in Kaisariani or drop us a message — we’re here to keep you looking sharp.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div data-aos="fade-right" class="space-y-6">
+          <div>
+            <h3 class="text-2xl font-bold mb-4 text-[#D4AF37]">Barber Mission</h3>
+            <p class="mb-2 flex items-center gap-2"><i data-feather="map-pin" class="text-[#D4AF37]"></i> Ευφρονίου 65, Καισαριανή, Αθήνα</p>
+            <p class="mb-2 flex items-center gap-2"><i data-feather="phone" class="text-[#D4AF37]"></i> 2107220307</p>
+            <p class="mb-2 flex items-center gap-2"><i data-feather="instagram" class="text-[#D4AF37]"></i> @barber.mission</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-[#D4AF37] mb-2">Opening Hours</h4>
+            <p>Tuesday – Saturday: 10:00 – 20:00</p>
+            <p>Sunday & Monday: Closed</p>
+          </div>
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.3929909999997!2d23.7857!3d37.9795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNzfCsDU4JzQ2LjIiTiAyM8KwNDcnMDguNSJF!5e0!3m2!1sen!2sgr!4v1616161616161!5m2!1sen!2sgr"
+            width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" class="rounded-lg mt-4"></iframe>
+        </div>
+
+        <!-- Contact Form -->
+        <div data-aos="fade-left">
+          <h3 class="text-2xl font-bold mb-6 text-[#D4AF37]">Send a Message</h3>
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+            <div>
+              <label class="block text-white/80 mb-2" for="name">Name</label>
+              <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded" required>
+            </div>
+            <div>
+              <label class="block text-white/80 mb-2" for="email">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded" required>
+            </div>
+            <div>
+              <label class="block text-white/80 mb-2" for="message">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded" required></textarea>
+            </div>
+            <button type="submit" class="bg-[#D4AF37] hover:bg-[#B8941F] text-black font-bold py-3 px-6 rounded transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8 border-t border-[#D4AF37]/20">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
+      <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
+      <p>Website by <a href="https://mariosgian.github.io" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
+    </div>
+  </footer>
+
+  <script>
+    feather.replace();
+    AOS.init({ duration: 800, once: true });
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
