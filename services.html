@@ -19,104 +19,156 @@
     .hover-lift:hover { transform: translateY(-5px); }
   </style>
 </head>
+
+
 <body class="text-white bg-black">
   
   <!-- Header -->
-  <header class="fixed w-full bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="images/logo.png" alt="BarberMission Logo" class="h-10 w-10 object-contain">
-        <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+  <header id="main-header" class="fixed w-full top-0 left-0 right-0 bg-black/90 backdrop-blur-sm text-white z-50 border-b border-[#D4AF37]/20 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-5 md:py-6">
+      <a href="index.html" class="text-2xl font-bold tracking-wide">
+        Barber<span class="text-[#D4AF37]">Mission</span>
       </a>
+
       <nav class="hidden md:block">
-        <ul class="flex gap-8 text-sm uppercase font-medium tracking-wider">
-          <li><a href="index.html" class="hover:text-[#D4AF37]">Home</a></li>
-          <li><a href="about.html" class="hover:text-[#D4AF37]">About</a></li>
-          <li><a href="services.html" class="text-[#D4AF37]">Services</a></li>
-          <li><a href="booking.html" class="hover:text-[#D4AF37]">Booking</a></li>
-          <li><a href="contact.html" class="hover:text-[#D4AF37]">Contact</a></li>
+        <ul class="flex items-center gap-10 text-sm uppercase font-medium tracking-wider">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link text-[#D4AF37]">Services</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
+
       <button id="menu-toggle" class="md:hidden focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
+        <i data-feather="menu"></i>
       </button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-black text-center">
+
+    <div id="mobile-menu" class="hidden md:hidden bg-black text-center border-t border-[#D4AF37]/10">
       <a href="index.html" class="block py-3 hover:text-[#D4AF37]">Home</a>
       <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
       <a href="services.html" class="block py-3 text-[#D4AF37]">Services</a>
-      <a href="booking.html" class="block py-3 hover:text-[#D4AF37]">Booking</a>
+      <a href="gallery.html" class="block py-3 hover:text-[#D4AF37]">Gallery</a>
       <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
     </div>
   </header>
+
   <div class="h-20"></div>
 
-  <!-- Services Section -->
-  <section id="services" data-animate class="py-24 bg-white text-black">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <div class="mb-16">
-        <div class="flex items-center justify-center gap-4 mb-4">
-          <div class="h-px w-16 bg-[#D4AF37]"></div>
-          <span class="text-[#D4AF37] tracking-[0.3em] text-sm font-medium">SERVICES</span>
-          <div class="h-px w-16 bg-[#D4AF37]"></div>
-        </div>
-        <h2 class="text-4xl md:text-5xl font-bold">Our Services</h2>
-        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
-          Precision grooming crafted for the modern man — clean fades, sharp lines, and premium care.  
-        </p>
-      </div>
+  <!-- Hero -->
+  <section class="relative h-[60vh] flex items-center justify-center text-center text-white overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=1600" alt="Barber tools" 
+         class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative z-10 px-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Our <span class="text-[#D4AF37]">Services</span></h1>
+      <p class="text-white/80 text-lg max-w-2xl mx-auto">
+        Precision grooming crafted for the modern man — clean fades, sharp lines, and premium care.
+      </p>
+    </div>
+  </section>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+  <!-- Services -->
+  <section class="py-24 bg-gradient-to-b from-black via-[#0e0e0e] to-black">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        
+        <!-- Card -->
+        <div class="bg-[#111] border border-[#D4AF37]/20 p-10 rounded-2xl hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all hover:-translate-y-2">
           <i data-feather="scissors" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
-          <h3 class="text-2xl font-bold mb-3">Haircut</h3>
-          <p class="text-gray-300 mb-3">Classic or modern styles tailored to you.</p>
+          <h3 class="text-2xl font-semibold mb-2">Haircut</h3>
+          <p class="text-white/70 mb-4 text-sm">Classic or modern styles tailored to you.</p>
           <p class="text-4xl font-bold text-[#D4AF37]">€15</p>
         </div>
 
-        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+        <div class="bg-[#111] border border-[#D4AF37]/20 p-10 rounded-2xl hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all hover:-translate-y-2">
           <i data-feather="activity" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
-          <h3 class="text-2xl font-bold mb-3">Beard Trim</h3>
-          <p class="text-gray-300 mb-3">Detailed beard shaping & finish.</p>
+          <h3 class="text-2xl font-semibold mb-2">Beard Trim</h3>
+          <p class="text-white/70 mb-4 text-sm">Detailed beard shaping & finish.</p>
           <p class="text-4xl font-bold text-[#D4AF37]">€10</p>
         </div>
 
-        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+        <div class="bg-[#111] border border-[#D4AF37]/20 p-10 rounded-2xl hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all hover:-translate-y-2">
           <i data-feather="star" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
-          <h3 class="text-2xl font-bold mb-3">Full Grooming</h3>
-          <p class="text-gray-300 mb-3">Haircut & beard — the full experience.</p>
+          <h3 class="text-2xl font-semibold mb-2">Full Grooming</h3>
+          <p class="text-white/70 mb-4 text-sm">Haircut & beard — the full experience.</p>
           <p class="text-4xl font-bold text-[#D4AF37]">€20</p>
         </div>
 
-        <div class="bg-black text-white border border-[#D4AF37]/20 p-8 rounded-lg hover-lift transition-transform" data-animate>
+        <div class="bg-[#111] border border-[#D4AF37]/20 p-10 rounded-2xl hover:shadow-[0_0_20px_rgba(212,175,55,0.2)] transition-all hover:-translate-y-2">
           <i data-feather="user" class="w-10 h-10 text-[#D4AF37] mx-auto mb-4"></i>
-          <h3 class="text-2xl font-bold mb-3">Kids Cut</h3>
-          <p class="text-gray-300 mb-3">Friendly and patient service for kids.</p>
+          <h3 class="text-2xl font-semibold mb-2">Kids Cut</h3>
+          <p class="text-white/70 mb-4 text-sm">Friendly and patient service for kids.</p>
           <p class="text-4xl font-bold text-[#D4AF37]">€12</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CTA -->
+  <section class="py-20 bg-[#D4AF37] text-black text-center">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Ready for Your Next Cut?</h2>
+      <p class="text-lg mb-8 text-black/80">
+        Book your appointment today and experience precision, style, and comfort at BarberMission.
+      </p>
+      <a href="contact.html" class="bg-black hover:bg-[#111] text-[#D4AF37] font-bold py-3 px-8 rounded-lg transition">
+        Book Appointment
+      </a>
+    </div>
+  </section>
+
   <!-- Footer -->
-  <footer class="bg-black text-white py-8 border-t border-[#D4AF37]/20">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/70">
-      <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
-      <p>Website by <a href="https://mariosgian.github.io" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
+  <footer class="bg-black text-white pt-12 pb-8 border-t border-[#D4AF37]/20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+        <div>
+          <span class="text-xl font-bold tracking-wide">Barber<span class="text-[#D4AF37]">Mission</span></span>
+          <p class="text-sm text-white/70 leading-relaxed mt-3">
+            Premium barbershop in Kaisariani, Athens — offering precision cuts and modern men's grooming since 2021.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Quick Links</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li><a href="index.html" class="hover:text-[#D4AF37] transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-[#D4AF37] transition">About</a></li>
+            <li><a href="services.html" class="hover:text-[#D4AF37] transition">Services</a></li>
+            <li><a href="gallery.html" class="hover:text-[#D4AF37] transition">Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-[#D4AF37] transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Our Services</h4>
+          <ul class="space-y-2 text-sm text-white/70">
+            <li>Haircut & Styling</li>
+            <li>Beard Trim</li>
+            <li>Full Grooming</li>
+            <li>Kids Cut</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-[#D4AF37] mb-4 uppercase tracking-widest">Contact Info</h4>
+          <address class="not-italic text-sm text-white/70 space-y-1">
+            <p>65 Efthroniou Street, Kaisariani</p>
+            <p>Athens, Greece</p>
+            <p><a href="tel:+302107220307" class="hover:text-[#D4AF37]">+30 210 722 0307</a></p>
+            <p><a href="https://instagram.com/barber.mission" target="_blank" class="hover:text-[#D4AF37]">@barber.mission</a></p>
+          </address>
+        </div>
+      </div>
+      <div class="border-t border-[#D4AF37]/10 my-6"></div>
+      <div class="flex flex-col md:flex-row justify-between items-center text-sm text-white/60 text-center md:text-left">
+        <p class="mb-2 md:mb-0">Designed & Developed by <a href="https://www.pixelnodestudio.com" target="_blank" class="text-[#D4AF37] hover:underline">Pixel Node Studio</a></p>
+        <p>© 2025 <span class="text-[#D4AF37] font-semibold">BarberMission</span>. All Rights Reserved.</p>
+      </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/feather-icons"></script>
   <script>
     feather.replace();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('fade-in-up');
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
     document.getElementById('menu-toggle').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
