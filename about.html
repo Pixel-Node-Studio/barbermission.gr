@@ -38,8 +38,8 @@
     .nav-link:hover::after {
       width: 100%;
     }
-    a:hover {
-      text-shadow: 0 0 8px rgba(212,175,55,0.5);
+    .nav-link:hover {
+      color: #D4AF37;
     }
   </style>
 </head>
@@ -66,18 +66,18 @@
       </nav>
 
       <!-- Mobile Button -->
-      <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <button id="menu-toggle" class="md:hidden focus:outline-none" aria-label="Toggle menu">
         <i data-feather="menu"></i>
       </button>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-black text-center border-t border-[#D4AF37]/10">
-      <a href="index.html" class="block py-3 hover:text-[#D4AF37]">Home</a>
-      <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
-      <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
-      <a href="gallery.html" class="block py-3 hover:text-[#D4AF37]">Gallery</a>
-      <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
+      <a href="index.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">Home</a>
+      <a href="about.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">About</a>
+      <a href="services.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">Services</a>
+      <a href="gallery.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">Gallery</a>
+      <a href="contact.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">Contact</a>
     </div>
   </header>
 
@@ -221,6 +221,13 @@
     const mobileMenu = document.getElementById('mobile-menu');
     menuToggle.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu on nav link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
     });
 
     // Highlight current page

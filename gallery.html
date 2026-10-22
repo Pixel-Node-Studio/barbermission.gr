@@ -15,9 +15,36 @@
     h1, h2, h3, h4, h5, h6 {
       font-family: 'Montserrat', sans-serif;
     }
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #D4AF37;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .nav-link:hover {
+      color: #D4AF37;
+    }
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 0.5rem;
+    }
     .gallery-img {
       transition: transform 0.4s ease, opacity 0.4s ease;
       opacity: 0.9;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .gallery-img:hover {
       transform: scale(1.05);
@@ -40,27 +67,27 @@
     <!-- Desktop Nav -->
     <nav class="hidden md:block">
       <ul class="flex items-center gap-10 text-sm uppercase font-medium tracking-wider">
-        <li><a href="index.html" class="nav-link text-[#D4AF37]">Home</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="services.html" class="nav-link">Services</a></li>
-        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="gallery.html" class="nav-link text-[#D4AF37]">Gallery</a></li>
         <li><a href="contact.html" class="nav-link">Contact</a></li>
       </ul>
     </nav>
 
     <!-- Mobile Button -->
-    <button id="menu-toggle" class="md:hidden focus:outline-none">
+    <button id="menu-toggle" class="md:hidden focus:outline-none" aria-label="Toggle menu">
       <i data-feather="menu"></i>
     </button>
   </div>
 
   <!-- Mobile Menu -->
   <div id="mobile-menu" class="hidden md:hidden bg-black text-center border-t border-[#D4AF37]/10">
-    <a href="index.html" class="block py-3 text-[#D4AF37]">Home</a>
-    <a href="about.html" class="block py-3 hover:text-[#D4AF37]">About</a>
-    <a href="services.html" class="block py-3 hover:text-[#D4AF37]">Services</a>
-    <a href="gallery.html" class="block py-3 hover:text-[#D4AF37]">Gallery</a>
-    <a href="contact.html" class="block py-3 hover:text-[#D4AF37]">Contact</a>
+    <a href="index.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">Home</a>
+    <a href="about.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">About</a>
+    <a href="services.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">Services</a>
+    <a href="gallery.html" class="block py-3 text-[#D4AF37]">Gallery</a>
+    <a href="contact.html" class="block py-3 hover:text-[#D4AF37] transition-colors duration-300">Contact</a>
   </div>
 </header>
 
@@ -80,17 +107,29 @@
         <p class="text-white/70 mt-4 max-w-2xl mx-auto">Take a look inside our craft — precision fades, clean lines, and timeless style.</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800" alt="Barber Work" class="gallery-img rounded-lg" data-aos="zoom-in">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800" alt="Barber Work" class="gallery-img rounded-lg" data-aos="zoom-in" data-aos-delay="100">
-        <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800" alt="Barber Work" class="gallery-img rounded-lg" data-aos="zoom-in" data-aos-delay="200">
-        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=800" alt="Barber Work" class="gallery-img rounded-lg" data-aos="zoom-in" data-aos-delay="300">
-        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800" alt="Barber Work" class="gallery-img rounded-lg" data-aos="zoom-in" data-aos-delay="400">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800" alt="Barber Work" class="gallery-img rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+        <div class="gallery-item aspect-[4/3]" data-aos="zoom-in">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800" alt="Haircut styling at BarberMission" class="gallery-img" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-[4/3]" data-aos="zoom-in" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?q=80&w=800" alt="Precision fade haircut" class="gallery-img" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-[4/3]" data-aos="zoom-in" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800" alt="Beard trim and grooming" class="gallery-img" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-[4/3]" data-aos="zoom-in" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?q=80&w=800" alt="Classic barber cut" class="gallery-img" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-[4/3]" data-aos="zoom-in" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800" alt="Modern men's hairstyle" class="gallery-img" loading="lazy">
+        </div>
+        <div class="gallery-item aspect-[4/3]" data-aos="zoom-in" data-aos-delay="500">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=800" alt="Sharp lineup and finishing touches" class="gallery-img" loading="lazy">
+        </div>
       </div>
 
       <div class="text-center mt-16" data-aos="fade-up">
-        <a href="https://instagram.com/barber.mission" target="_blank" class="inline-block bg-[#D4AF37] hover:bg-[#B8941F] text-black font-bold py-3 px-8 rounded transition">
+        <a href="https://instagram.com/barber.mission" target="_blank" class="inline-block bg-[#D4AF37] hover:bg-[#B8941F] text-black font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg">
           Follow us on Instagram @barber.mission
         </a>
       </div>
@@ -174,28 +213,14 @@
     document.getElementById('menu-toggle').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
-  </script>
-  <script>
-    feather.replace();
-  
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+
+    // Close mobile menu on nav link click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
     });
-  
-    // Highlight active link automatically
-    const currentPage = window.location.pathname.split('/').pop();
-    document.querySelectorAll('.nav-link').forEach(link => {
-      if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-      }
-    });
-  </script>
-  <script>
-    feather.replace();
-    document.getElementById('menu-toggle').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
-    });
-  
+
     // Highlight current page
     const current = window.location.pathname.split('/').pop();
     document.querySelectorAll('.nav-link').forEach(link => {
